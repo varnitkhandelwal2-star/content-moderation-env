@@ -1,0 +1,14 @@
+version: 'latest'
+name: 'content_moderation_env'
+description: 'A comprehensive evaluation environment for content moderation using 5 specialized Tasks, including Contextual Appeals and Video Captions. Measures confidence logic, user history evaluation, and strict policy matching.'
+tags: ['openenv', 'safety', 'moderation', 'hackathon']
+
+entrypoint: 'env.py'
+environment_class: 'ContentModerationEnv'
+
+action_space: 
+  type: 'pydantic'
+  model: 'env.Action'
+observation_space: 
+  type: 'pydantic'
+  model: 'env.Observation'
